@@ -57,7 +57,7 @@ window.fluidboxGhost = $.when(
         let imgSrc = $img.attr('src');
         let newRule = 'background-image: url("' + imgSrc + '") !important;';
         document.styleSheets[0].insertRule(".fluidbox__overlay::before{"+ newRule + "}", document.styleSheets[0].cssRules.length);
-        $('.fluidbox__ghost').appendTo('.content-area'); //!!<script async src="https://cdn.jsdelivr.net/gh/Torqu3Wr3nch/fluidbox-ghost-blog-plugin@0.1.1a/fluidbox-ghost-blog-plugin.min.js"></script>
+        $('.fluidbox__ghost').appendTo('.row'); //!!<script async src="https://cdn.jsdelivr.net/gh/Torqu3Wr3nch/fluidbox-ghost-blog-plugin@0.1.1a/fluidbox-ghost-blog-plugin.min.js"></script>
       }
     }).on('openend.fluidbox', function() {
       activeImage = this;
