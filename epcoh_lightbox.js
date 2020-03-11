@@ -56,7 +56,6 @@ window.fluidboxGhost = $.when(
         var $img = $(this).find('img');
         let imgSrc = $img.attr('src');
         let newRule = 'background-image: url("' + imgSrc + '") !important;';
-        $(this).appendTo(".content-area"); //!!<script async src="https://cdn.jsdelivr.net/gh/Torqu3Wr3nch/fluidbox-ghost-blog-plugin@0.1.1a/fluidbox-ghost-blog-plugin.min.js"></script>
         document.styleSheets[0].insertRule(".fluidbox__overlay::before{"+ newRule + "}", document.styleSheets[0].cssRules.length);
       }
     }).on('openend.fluidbox', function() {
@@ -64,7 +63,9 @@ window.fluidboxGhost = $.when(
       if(showCaption){
         let caption = $(this).parents('figure').find('figcaption').html()
         if(caption && caption.length > 0){
+//$(this).appendTo(".content-area"); //!!<script async src="https://cdn.jsdelivr.net/gh/Torqu3Wr3nch/fluidbox-ghost-blog-plugin@0.1.1a/fluidbox-ghost-blog-plugin.min.js"></script>
           $('#caption-overlay')
+            .appendTo(".content-area") //!!
             .addClass('visible')
             .find('.img-caption').text(caption)
         }
