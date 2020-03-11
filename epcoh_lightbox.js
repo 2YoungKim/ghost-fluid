@@ -1,7 +1,7 @@
 
 $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css') );
 $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdn.jsdelivr.net/gh/coreysnyder04/fluidbox-ghost-blog-plugin@8c04f1180f64a0e434236fdb7f8c28eb120ba395/fluidbox-ghost-blog-plugin.css') );
-
+/*
 jQuery.fn.center = function () {
   this.css("position","fixed");
   this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
@@ -14,7 +14,7 @@ jQuery.fn.rmv = function () {
   this.css("top", "0 px");
   this.css("left", "0 px");
 }
-
+*/
 window.fluidboxGhost = $.when(
   $.getScript( "//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" ),
   $.getScript( "//cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/js/jquery.fluidbox.min.js" ),
@@ -70,7 +70,10 @@ window.fluidboxGhost = $.when(
         let imgSrc = $img.attr('src');
         let newRule = 'background-image: url("' + imgSrc + '") !important;';
         document.styleSheets[0].insertRule(".fluidbox__overlay::before{"+ newRule + "}", document.styleSheets[0].cssRules.length);
-        $('.fluidbox__ghost').center();
+        $('.fluidbox__ghost').css({"position": "fixed", 
+                                   "top": Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px"), 
+                                   "left": Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px")
+                                  });
       }
     }).on('openend.fluidbox', function() {
       activeImage = this;
@@ -85,7 +88,10 @@ window.fluidboxGhost = $.when(
     })
       .on('closestart.fluidbox', function() {
         activeImage = null;
-        $('.fluidbox__ghost').rmv();
+        $('.fluidbox__ghost').css({"position": "absolute", 
+                                   "top": "0 px"), 
+                                   "left": "0 px")
+                                  });
         $('#caption-overlay').removeClass('visible');
       });
 
