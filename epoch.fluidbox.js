@@ -193,7 +193,7 @@
 						height: $fbThumb.height(),
 						top: '50%',
 						left: '50%',
-            position: 'fixed')
+           					position: 'fixed'
 					});
 				}
 			},
