@@ -61,7 +61,6 @@ window.fluidboxGhost = $.when(
       }
     }).on('openend.fluidbox', function() {
       activeImage = this;
-      $('.post').width(window.innerWidth); //!!
       if(showCaption){
         let caption = $(this).parents('figure').find('figcaption').html()
         if(caption && caption.length > 0){
@@ -73,7 +72,6 @@ window.fluidboxGhost = $.when(
     })
       .on('closestart.fluidbox', function() {
         activeImage = null;
-        $('.post').width('555'); //!!
         $('#caption-overlay').removeClass('visible');
       });
 
