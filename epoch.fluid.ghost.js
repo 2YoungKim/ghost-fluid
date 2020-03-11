@@ -1,10 +1,10 @@
 
 $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/fluidbox.min.css') );
-$('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/epcoh_lightbox.css') );
+$('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/epoch_lightbox.css') );
 
 window.fluidboxGhost = $.when(
   $.getScript( "//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" ),
-  $.getScript( "//cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/epcoh.fluidbox.js" ), 
+  $.getScript( "//cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/epoch.fluidbox.js" ), 
   //$.getScript( "//cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/js/jquery.fluidbox.min.js" ), //cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/epcoh_lightbox.css'
   $.Deferred(function( deferred ){
     $( deferred.resolve );
