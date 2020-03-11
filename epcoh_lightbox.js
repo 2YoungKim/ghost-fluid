@@ -1,23 +1,11 @@
 
 $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css') );
 $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/epcoh_lightbox.css') );
-/*
-jQuery.fn.center = function () {
-  this.css("position","fixed");
-  this.css("top", Math.max(0, (($(window).height() - $(this).outerHeight()) / 2) + $(window).scrollTop()) + "px");
-  this.css("left", Math.max(0, (($(window).width() - $(this).outerWidth()) / 2) + $(window).scrollLeft()) + "px");
-  return this;
-}
 
-jQuery.fn.rmv = function () {
-  this.css("position", "absolute");
-  this.css("top", "0 px");
-  this.css("left", "0 px");
-}
-*/
 window.fluidboxGhost = $.when(
   $.getScript( "//cdnjs.cloudflare.com/ajax/libs/jquery-throttle-debounce/1.1/jquery.ba-throttle-debounce.min.js" ),
-  $.getScript( "//cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/js/jquery.fluidbox.min.js" ),
+  $.getScript( "//cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/epcoh_fluidbox.min.js" ), 
+  //$.getScript( "//cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/js/jquery.fluidbox.min.js" ), //cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/epcoh_lightbox.css'
   $.Deferred(function( deferred ){
     $( deferred.resolve );
   })
