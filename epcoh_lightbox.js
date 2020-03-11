@@ -1,6 +1,5 @@
 
 $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdnjs.cloudflare.com/ajax/libs/fluidbox/2.0.5/css/fluidbox.min.css') );
-//$('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdn.jsdelivr.net/gh/coreysnyder04/fluidbox-ghost-blog-plugin@8c04f1180f64a0e434236fdb7f8c28eb120ba395/fluidbox-ghost-blog-plugin.css') );
 $('head').append( $('<link rel="stylesheet" type="text/css" />').attr('href', '//cdn.jsdelivr.net/gh/2YoungKim/ghost-fluid/epcoh_lightbox.css') );
 /*
 jQuery.fn.center = function () {
@@ -43,6 +42,8 @@ window.fluidboxGhost = $.when(
     }
 
     document.styleSheets[0].insertRule(".fluidbox__wrap .fluidbox__overlay{ background-color: " + backgroundColor + "!important; }", document.styleSheets[0].cssRules.length);
+    document.styleSheets[0].insertRule(".fluidbox__ghost { position: fixed !important; }", document.styleSheets[0].cssRules.length);
+  
 
     let showCaption = window.fluidboxGhostConfig.showCaption;
 
