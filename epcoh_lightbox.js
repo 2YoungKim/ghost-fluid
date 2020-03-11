@@ -30,8 +30,6 @@ window.fluidboxGhost = $.when(
     }
 
     document.styleSheets[0].insertRule(".fluidbox__wrap .fluidbox__overlay{ background-color: " + backgroundColor + "!important; }", document.styleSheets[0].cssRules.length);
-    document.styleSheets[0].insertRule(".fluidbox__ghost { position: fixed !important; }", document.styleSheets[0].cssRules.length);
-  
 
     let showCaption = window.fluidboxGhostConfig.showCaption;
 
